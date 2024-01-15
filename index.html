@@ -273,48 +273,47 @@
             }, {
                 name: "Delhi",
                 address: {
-                    heading: "Pune - Corporate Office",
-                    description: "Ascender Marketing Solutions Private Limited Pyramid Axis Office 302 Baner Road, Behind Croma Showroom Baner Pune, Maharashtra - 411045",
-                    phone: "7722078396 / 9579740519",
-                    email: "info@ascendermarketing.com"
+                    description: "Bestech Park view Spa next Sector 67 Gurugram - 122101",
                 }
             }, {
                 name: "Mumbai",
                 address: {
-                    heading: "Pune - Corporate Office",
-                    description: "Ascender Marketing Solutions Private Limited Pyramid Axis Office 302 Baner Road, Behind Croma Showroom Baner Pune, Maharashtra - 411045",
-                    phone: "7722078396 / 9579740519",
-                    email: "info@ascendermarketing.com"
+                    description: "A-1,Raj industrial complex Marol militry road marol Andheri East Mumbai, Mumbai, Maharashtra - 400059",
                 }
             }, {
                 name: "Dubai",
                 address: {
-                    heading: "Pune - Corporate Office",
-                    description: "Ascender Marketing Solutions Private Limited Pyramid Axis Office 302 Baner Road, Behind Croma Showroom Baner Pune, Maharashtra - 411045",
-                    phone: "7722078396 / 9579740519",
-                    email: "info@ascendermarketing.com"
+                    description: "Opening Shortly!",
                 }
             }, {
                 name: "Thailand",
                 address: {
-                    heading: "Pune - Corporate Office",
-                    description: "Ascender Marketing Solutions Private Limited Pyramid Axis Office 302 Baner Road, Behind Croma Showroom Baner Pune, Maharashtra - 411045",
-                    phone: "7722078396 / 9579740519",
-                    email: "info@ascendermarketing.com"
+                    description: "39/135 Moo 10, Soi Khao Noi Sub District Nong Prue Bang Lamung District Chonburi -20150 Thailand ",
                 }
             }]
-            return <section className="p-5">
-                <h1>Our Presence</h1>
+            return <section className="p-5 position-relative ascender-light">
+                <h2 className="text-bold">Our Presence</h2>
                 <div className="row">
                     <div className="col-2">
                         <div className="border">
-                            {places.map((place) => {
-                                return <h4 className="py-5 px-3 border-bottom">{place.name}</h4>
-                            })}
+                            {places.map(place => <div className="place pointer p-3 my-3" key={place.name}>
+                                <div className="d-flex justify-content-between align-items-center">
+                                    <h4 className="font18">{place.name}</h4>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </div>
+
+                                <div id={place.name} style={{ width: "250px" }} className="position-absolute child bg-white p-3 rounded shadow">
+                                    <p className="font18 blue">{place.address.heading || place.name}</p>
+                                    <p className="font14">{place.address.description}</p>
+                                </div>
+                            </div>
+                            )}
                         </div>
                     </div>
-                    <div className="col-10">
-                        <img className="w-100 h-100" src="./styles/images/Group 103.png" />
+                    <div className="col-10 text-center">
+                        <img style={{ maxHeight: "500px" }} className="w-75 h-100" src="./styles/images/Group 103.png" />
                     </div>
                 </div>
 
@@ -322,10 +321,10 @@
         }
 
         function Footer() {
-            return <section className="ascender-dark py-5 px-3 text-white">
+            return <section className="ascender-dark py-5 px-3">
                 <h1 className="text-bold outlined text-center">LET’S DO GOOD TOGETHER</h1>
 
-                <div className="row">
+                <div className="row text-white">
                     <div className="col-4 text-center">
                         <img src="./styles/images/Ascender Logo_Black-01 3.png" />
                     </div>
@@ -342,13 +341,31 @@
                         </p>
                     </div>
                 </div>
-                <div className="row mt-5">
-                    <div className="col-6">
+                <div className="row mt-5 text-white w-75 m-auto">
+                    <div className="col-3">
                         <p className="text-bold">Contact Us</p>
                         <p>Ascender Marketing Solutions Private Limited Pyramid Axis Office 302 Baner Road, Behind Croma Showroom Baner Pune, Maharashtra - 411045</p>
+                        <div className="d-flex align-items-center justify-content-center">
+                            <img className="me-1" src="./styles/images/Insta.png" />
+                            <p className="mx-2">7722078396 / 9579740519</p>
+                        </div>
+                        <div className="d-flex align-items-center justify-content-center">
+                            <img className="me-1" src="./styles/images/Insta.png" />
+                            <p>info@ascendermarketing.com</p>
+                        </div>
+
+
                     </div>
+                    <div className="col-3"></div>
                     <div className="col-6">
-                        <p className="text-bold">Contact Us</p>
+                        <p className="text-bold">Follow Us</p>
+                        <div className="d-flex">
+                            <img className="me-1" src="./styles/images/Insta.png" />
+                            <img className="me-1" src="./styles/images/Insta.png" />
+                            <img className="me-1" src="./styles/images/Insta.png" />
+
+                        </div>
+
                     </div>
                 </div>
             </section>

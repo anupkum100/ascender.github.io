@@ -11,6 +11,7 @@
     background-color: #F0F5F7;
 }
 
+
 @font-face {
     font-family: Quicksand-Bold;
     src: url(./fonts/Quicksand/static/Quicksand-Bold.ttf);
@@ -45,6 +46,14 @@ p {
     font-size: 16px;
 }
 
+.font18 {
+    font-size: 18px;
+}
+
+.font14 {
+    font-size: 14px;
+}
+
 body {
     font-family: Quicksand-Regular;
 }
@@ -62,6 +71,10 @@ a,
     color: #E56039 !important;
 }
 
+.blue {
+    color: #3428C2
+}
+
 .outlined {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
@@ -70,4 +83,44 @@ a,
 /* Hide scrollbar for Chrome, Safari and Opera */
 *::-webkit-scrollbar {
     display: none;
+}
+
+
+.place .child {
+    visibility: hidden;
+
+}
+
+.place:hover .child {
+    visibility: visible;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/* Add position for new places here  */
+#Pune {
+    left: 800px;
+    top: 200px
+}
+
+#Delhi {
+    left: 800px;
+    top: 180px
+}
+
+#Mumbai {
+    left: 820px;
+    top: 200px
+}
+
+#Dubai {
+    left: 700px;
+    top: 200px
+}
+
+#Thailand {
+    left: 900px;
+    top: 200px
 }
