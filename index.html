@@ -1,0 +1,237 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ascender Marketing</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="./styles/styles.css" rel="stylesheet" />
+
+    <script type="text/babel">
+        function Banner() {
+            return <section className="position-relative">
+                <img className="position-absolute" style={{ left: "60px", top: "10px" }} src="./styles/images/Ascender Logo_Black-01 2.png" />
+                <img className="w-100 h-100" src="./styles/images/Banner.png" />
+
+                <div style={{ zIndex: 1, bottom: "10px" }} className="w-100 position-absolute d-flex align-items-center justify-content-center">
+                    <p className="text-white">In Ascender we take care</p>
+                </div>
+            </section>
+        }
+
+        function WhyAscender() {
+            return <section className="w-50 m-auto py-5">
+                <h1 className="text-center">Why <span className="text-bold">Ascender?</span></h1>
+                <p className="text-left">Ascender Marketing is your prime destination to make your events successful! We provide seamless and creative event management services by providing experiences where passion meets quality by carefully meeting your needs. At Ascender, we understand the importance of long-lasting impressions through impactful experiences.
+                    <br /><br />
+                    Our team of seasoned professionals stays dedicated to transforming your vision into a reality by working relentlessly and carefully handling all details to ensure a perfect result. Our events are custom-designed from conceptualization to implementation, serving a commitment to excellence and creativity.
+                    <br /><br />
+                    We prioritize your success by combining innovation with expertise, leveraging advanced technologies, and providing a comprehensive suite of services including event planning, logistics management, and engagement strategies. Explore your unfetched avenues today by trusting Ascender Marketing to help elevate your brand, captivate your audience, and be remembered!</p>
+            </section>
+        }
+
+        function OurStats() {
+            const stats = [{
+                count: 80,
+                description: "Happy Clients"
+            }, {
+                count: 500,
+                description: "Events Managed"
+            }, {
+                count: 200,
+                description: "Promotions"
+            }, {
+                count: 50,
+                description: "Exhibitions"
+            }]
+            return <section className="ascender-dark p-5">
+                <h1 className="text-bold">OUR STATS</h1>
+                <div className="row">
+                    {stats.map(stat => <div className="col-3 d-flex flex-column" key={stat.description}>
+                        <h1 className="text-bold yellow">{stat.count}</h1>
+                        <span className="text-light">{stat.description}</span>
+                    </div>)}
+
+                </div>
+
+                <small className="text-light">Delivering a wide range of events services focusing on the best in class in event industry by our team of experts and specialists.</small>
+            </section>
+        }
+
+        function HowWeWork() {
+            const works = [{
+                title: "Research",
+                description: "Embark your journey towards a successful event with Ascender Marketing. Our seamless research process creates a strong foundation for all our upcoming events. Through comprehensive examination and consultation, we formulate the objectives, preferences, and requirements of our clients. Our attention to detail ensures that tailor each event in alignment with the unique needs of our clients.",
+                img: "Saly-26.png"
+            }, {
+                title: "Ideate",
+                description: "Ascender Marketing will breathe life into your dreams through innovative ideas. All important information gathered during the research process is carefully translated into a detailed concept for the event in this phase.",
+                img: "BULB2C 2.png"
+            }, {
+                title: "Exhibit",
+                description: "In this phase, we will showcase our diligently prepared event concepts to you. Through visually stunning and clear communication, we will bring forward a comprehensible roadmap that will bring your vision to life.",
+                img: "ic_horn.png"
+            }, {
+                title: "Design",
+                description: "The creative prowess at Ascender Marketing will help elevate your event by profusing each element and detail of the event with innovation, creativity, and uniqueness catering to your needs. This experience will be lived through all stages from thematic designs and engaging experiences to leave a lasting impression on your guests.",
+                img: "tablet.png"
+            }, {
+                title: "Execute",
+                description: "Finally, your dream and vision will unfold into reality with Ascender Marketing. We promise seamless and expert execution by a team of professionals who work with precision, coordination, and attention to detail. All aspects of your event from logistics to management will be executed flawlessly in this stage leaving an impressionable experience for you and your attendees.",
+                img: "Gear.png"
+            }, {
+                title: "Evaluate",
+                description: "After the long journey from dreaming to executing, we reach this stage to measure success and refine strategies carefully through our evaluation process. At Ascender Marketing, we are guided by an assessment of every event’s performance. Through analyzing key metrics, gathering feedback, and deriving valuable insights, we ensure to keep getting better at every subsequent event. We execute memorable events and learn and grow with each client and experience.",
+                img: "Tick.png"
+            }]
+            return <section className="p-5">
+                <h2 className="text-bold">How we work</h2>
+
+                <div className="d-flex" style={{ marginTop: "100px", overflowX: "auto" }}>
+                    {works.map(work => <div className="text-center position-relative flex-shrink-0 mx-3" style={{ width: "430px", height: "490px", border: "0.5px solid #A2A2A2", borderRadius: "55px", boxShadow: "3px 3px 3px A2A2A2" }} key={work.title}>
+                        <img style={{ left: "150px", top: "-60px", zIndex: 2 }} className="position-absolute" src={`./styles/images/${work.img}`} />
+
+                        <p style={{ marginTop: "100px" }}>{work.title}</p>
+                        <p>{work.description}</p>
+                    </div>)}
+                </div>
+            </section>
+        }
+
+        function OurServices() {
+            return <section>
+                <h1>Our Services</h1>
+                <p>We turn events into unforgettable experiences. Our comprehensive suite of services is designed to elevate your occasions, be it corporate events, promotions, audits, retail experiences, rural engagements, or trade fairs. At Ascender Marketing, we blend creativity with precision, offering strategic event planning, seamless execution, and meticulous evaluation.</p>
+            </section>
+        }
+
+        function OurWork() {
+            return <section className="ascender-dark">
+                <h1>Our Work</h1>
+                <p>Join hands with Ascender Marketing to transform your ideas into extraordinary realities. Our work reflects commitment and passion towards each event and crafts unforgettable experiences for our clients and their audience.
+
+                    Live this excellence of seamless execution and unique solutions that have accumulated trust from countless clients. Help us help you make all your events shine from intimate gatherings to grand-scale celebrations, as we embark on a beautiful journey of chasing dreams!</p>
+            </section>
+        }
+
+        function OurPresence() {
+            const places = [{
+                name: "Pune",
+                address: {
+                    heading: "Pune - Corporate Office",
+                    description: "Ascender Marketing Solutions Private Limited Pyramid Axis Office 302 Baner Road, Behind Croma Showroom Baner Pune, Maharashtra - 411045",
+                    phone: "7722078396 / 9579740519",
+                    email: "info@ascendermarketing.com"
+                }
+            }, {
+                name: "Pune",
+                address: {
+                    heading: "Pune - Corporate Office",
+                    description: "Ascender Marketing Solutions Private Limited Pyramid Axis Office 302 Baner Road, Behind Croma Showroom Baner Pune, Maharashtra - 411045",
+                    phone: "7722078396 / 9579740519",
+                    email: "info@ascendermarketing.com"
+                }
+            }]
+            return <section className="p-5">
+                <h1>Our Presence</h1>
+                <div className="row">
+                    <div className="col-2">
+                        <div className="border">
+                            {places.map((place) => {
+                                return <h4 className="py-5 px-3 border-bottom">{place.name}</h4>
+                            })}
+                        </div>
+                    </div>
+                    <div className="col-10">
+                        <img className="w-100 h-100" src="./styles/images/Group 103.png" />
+                    </div>
+                </div>
+
+            </section>
+        }
+
+        function Footer() {
+            return <section style={{ height: "calc(60vh)" }} className="ascender-dark">
+            </section>
+        }
+
+        // Render the component to the DOM
+        ReactDOM.render(<section className="w-100 h-100">
+            <Banner />
+            <WhyAscender />
+            <OurStats />
+            <HowWeWork />
+            <OurServices />
+            <OurWork />
+            <OurPresence />
+            <Footer />
+        </section>
+            ,
+            document.getElementById("root")
+        );
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+<style>
+    .word1,
+    .word2,
+    .word3 {
+        background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        right: 0
+    }
+
+    @keyframes bounceInUp {
+        0% {
+            display: "none";
+            transform: translateY(2000px);
+        }
+
+        60% {
+            display: "block";
+            transform: translateY(-30px);
+        }
+
+        80% {
+            transform: translateY(10px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .bounceInUp {
+        -webkit-animation-name: bounceInUp;
+        animation-name: bounceInUp;
+    }
+
+    .word1 {
+        -webkit-animation: bounceInUp 2s infinite;
+        -webkit-animation-delay: 0s;
+
+    }
+
+    .word2 {
+        display: "none";
+        -webkit-animation: bounceInUp 2s infinite;
+        -webkit-animation-delay: 2s;
+    }
+</style>
