@@ -11,9 +11,10 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script type="text/javascript" src="https://unpkg.com/babel-standalone@6/babel.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
     <link href="./styles/styles.css" rel="stylesheet" />
 
     <script type="text/babel">
@@ -29,9 +30,10 @@
         }
 
         function WhyAscender() {
-            return <section className="w-50 m-auto py-5">
-                <h1 className="text-center">Why <span className="text-bold">Ascender?</span></h1>
-                <p className="text-left">Ascender Marketing is your prime destination to make your events successful! We provide seamless and creative event management services by providing experiences where passion meets quality by carefully meeting your needs. At Ascender, we understand the importance of long-lasting impressions through impactful experiences.
+            return <section style={{ height: "700px" }} className="m-auto py-5 position-relative">
+                <div className="ascender-light position-absolute" style={{ height: "1300px", width: "90%", borderRadius: "50%", zIndex: "-1", top: "-100%", left: "5%" }}></div>
+                <h2 className="w-50 m-auto mb-3">Why <span className="text-bold">Ascender?</span></h2>
+                <p className="text-left w-50 m-auto">Ascender Marketing is your prime destination to make your events successful! We provide seamless and creative event management services by providing experiences where passion meets quality by carefully meeting your needs. At Ascender, we understand the importance of long-lasting impressions through impactful experiences.
                     <br /><br />
                     Our team of seasoned professionals stays dedicated to transforming your vision into a reality by working relentlessly and carefully handling all details to ensure a perfect result. Our events are custom-designed from conceptualization to implementation, serving a commitment to excellence and creativity.
                     <br /><br />
@@ -54,7 +56,7 @@
                 description: "Exhibitions"
             }]
             return <section className="ascender-dark p-5">
-                <h1 className="text-bold">OUR STATS</h1>
+                <h1 className="text-bold outlined">OUR STATS</h1>
                 <div className="row">
                     {stats.map(stat => <div className="col-3 d-flex flex-column" key={stat.description}>
                         <h1 className="text-bold yellow">{stat.count}</h1>
@@ -108,18 +110,154 @@
         }
 
         function OurServices() {
-            return <section>
-                <h1>Our Services</h1>
-                <p>We turn events into unforgettable experiences. Our comprehensive suite of services is designed to elevate your occasions, be it corporate events, promotions, audits, retail experiences, rural engagements, or trade fairs. At Ascender Marketing, we blend creativity with precision, offering strategic event planning, seamless execution, and meticulous evaluation.</p>
+            const services = [{
+                name: "EVENTS",
+                descrition: "Help your brand shine and succeed through carefully curated events by Ascender Marketing. Our services are designed to help transform your vision into a reality through seamless execution from conceptualization to implementation. We personalize our events according to your unique needs to captivate your audience through a bouquet of services performed by experts. By bringing together passion, creativity, and a keen eye for detail, we can help convert an ordinary event into an extraordinary experience."
+            }, {
+                name: "PROMOTIONS",
+                descrition: "Ascender Marketing provides strategic promotional services to spark brand visibility and engagement by crafting compelling campaigns to resonate with your brand and reach your target audience. We should be your answer from activating your brand to launching new products. Our team of seasoned professionals uses their expertise to leverage innovation and creativity to create buzz and drive results through impactful experiences."
+            }, {
+                name: "TRADE FAIRS",
+                descrition: "Showcase your brand to industry specialists and potential clients using Ascender Marketing’s expert event management services. We specialize in creating captivating and engaging trade fair experiences for our clients paying attention to all details from design to logistics. Our team of skilled and specialised professionals with work relentlessly to ensure that your brand stands out in a crowded marketplace. Help us help you form meaningful connections in your industry today!"
+            }, {
+                name: "AUDIT",
+                descrition: "Ascender Marketing’s comprehensive audit services can help you ensure accuracy and accountability in all your events. We precisely review and analyze all aspects of an event from budget to logistics. Our core lies in providing valuable insights to our clients through transparency and efficiency to optimize events."
+            }, {
+                name: "RURAL",
+                descrition: "Our specialized rural event management services will help you extend your boundaries beyond the urban landscapes and help you understand the dynamics of different rural markets. We, at Ascender Marketing, recognize the needs of our clients and those of the local communities to ensure a seamless and authentic connection between the two. Partner with us to ace many rural events from agricultural fairs to community festivals to unlock new potentials and build new relationships."
+            }, {
+                name: "RETAIL",
+                descrition: "Enhance your customer engagement, boost sales, and transform mere retail experiences into unforgettable brand interactions with Ascender Marketing. Our personalized services can help you drive foot traffic store openings, product showcases, and even in-store promotions."
+            }]
+            return <section className="p-3 my-5 ascender-light">
+                <div className="w-50 m-auto text-center">
+                    <h2 className="text-bold">Our Services</h2>
+                    <p>We turn events into unforgettable experiences. Our comprehensive suite of services is designed to elevate your occasions, be it corporate events, promotions, audits, retail experiences, rural engagements, or trade fairs. At Ascender Marketing, we blend creativity with precision, offering strategic event planning, seamless execution, and meticulous evaluation.</p>
+                </div>
+                <div className="my-5">
+                    <div className="row">
+                        {services.map(service => <h3 className="col-2 text-center" style={{ color: "#C5D1E8" }}>{service.name}</h3>)}
+                    </div>
+                    <div>
+                        <p>{services[0].descrition}</p>
+                    </div>
+                </div>
             </section>
         }
 
         function OurWork() {
-            return <section className="ascender-dark">
-                <h1>Our Work</h1>
+            return <section className="ascender-dark m-auto p-5 text-white text-center curved">
+                <h1 className="text-bold">Our Work</h1>
                 <p>Join hands with Ascender Marketing to transform your ideas into extraordinary realities. Our work reflects commitment and passion towards each event and crafts unforgettable experiences for our clients and their audience.
-
+                    <br /><br />
                     Live this excellence of seamless execution and unique solutions that have accumulated trust from countless clients. Help us help you make all your events shine from intimate gatherings to grand-scale celebrations, as we embark on a beautiful journey of chasing dreams!</p>
+            </section>
+        }
+
+        function OurBrands() {
+            const brands = ["image 14", "image 14", "image 14", "image 14", "image 14", "image 14"]
+            return <section className="ascender-light p-5">
+                <h2 className="text-bold text-center">Brands trusted on us</h2>
+                <div className="row">
+                    {brands.map(brand => <div className="p-3 col-2">
+                        <div className="bg-white p-3 text-center">
+                            <img src={`./styles/images/${brand}.png`} />
+                        </div>
+                    </div>)}
+                </div>
+            </section>
+        }
+
+        function Testimonials() {
+            const brands = ["image 14", "image 14", "image 14", "image 14", "image 14", "image 14"]
+            return <section className="p-5">
+                <h2 className="text-bold text-center">Testimonials</h2>
+                <h4 className="text-center">Words from our <span className="text-bold">Happy Clients</span></h4>
+                <p className="text-center">We take pride in ensuring that our clients have a good working experience.</p>
+
+                <div id="carouselExampleIndicators" className="carousel carousel-dark slide py-5" data-ride="carousel">
+                    <div className="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div className="carousel-inner w-75 m-auto">
+                        <div className="carousel-item active">
+                            <div className="row">
+                                <div className="col-6">
+                                    <div className="d-flex flex-column">
+                                        <span className="orange" style={{ fontSize: "36px" }}>"</span>
+                                        <img width="72" src="./styles/images/Ellipse 1.png" />
+                                    </div>
+                                    <h5 className="text-bold my-2">Lorem ipsum dolor sit1</h5>
+                                    <p className="w-75">Lorem ipsum dolor sit amet consectetur. Platea placerat in maecenas mattis nunc. Ac nibh quisque elementum pulvinar pellentesque scelerisque. Lacus integer tincidunt dictum nibh dignissim purus ac magna sapien. Pulvinar amet a dapibus in tortor blandit.</p>
+                                </div>
+                                <div className="col-6">
+                                    <div className="d-flex flex-column">
+                                        <span className="orange" style={{ fontSize: "36px" }}>"</span>
+                                        <img width="72" src="./styles/images/Ellipse 1.png" />
+                                    </div>
+                                    <h5 className="text-bold my-2">Lorem ipsum dolor sit1</h5>
+                                    <p className="w-75">Lorem ipsum dolor sit amet consectetur. Platea placerat in maecenas mattis nunc. Ac nibh quisque elementum pulvinar pellentesque scelerisque. Lacus integer tincidunt dictum nibh dignissim purus ac magna sapien. Pulvinar amet a dapibus in tortor blandit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="carousel-item">
+                            <div className="row">
+                                <div className="col-6">
+                                    <div className="d-flex flex-column">
+                                        <span className="orange" style={{ fontSize: "36px" }}>"</span>
+                                        <img width="72" src="./styles/images/Ellipse 1.png" />
+                                    </div>
+                                    <h5 className="text-bold my-2">Lorem ipsum dolor sit1</h5>
+                                    <p className="w-75">Lorem ipsum dolor sit amet consectetur. Platea placerat in maecenas mattis nunc. Ac nibh quisque elementum pulvinar pellentesque scelerisque. Lacus integer tincidunt dictum nibh dignissim purus ac magna sapien. Pulvinar amet a dapibus in tortor blandit.</p>
+                                </div>
+                                <div className="col-6">
+                                    <div className="d-flex flex-column">
+                                        <span className="orange" style={{ fontSize: "36px" }}>"</span>
+                                        <img width="72" src="./styles/images/Ellipse 1.png" />
+                                    </div>
+                                    <h5 className="text-bold my-2">Lorem ipsum dolor sit1</h5>
+                                    <p className="w-75">Lorem ipsum dolor sit amet consectetur. Platea placerat in maecenas mattis nunc. Ac nibh quisque elementum pulvinar pellentesque scelerisque. Lacus integer tincidunt dictum nibh dignissim purus ac magna sapien. Pulvinar amet a dapibus in tortor blandit.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className="carousel-item">
+                            <div className="row">
+                                <div className="col-6">
+                                    <div className="d-flex flex-column">
+                                        <span className="orange" style={{ fontSize: "36px" }}>"</span>
+                                        <img width="72" src="./styles/images/Ellipse 1.png" />
+                                    </div>
+                                    <h5 className="text-bold my-2">Lorem ipsum dolor sit1</h5>
+                                    <p className="w-75">Lorem ipsum dolor sit amet consectetur. Platea placerat in maecenas mattis nunc. Ac nibh quisque elementum pulvinar pellentesque scelerisque. Lacus integer tincidunt dictum nibh dignissim purus ac magna sapien. Pulvinar amet a dapibus in tortor blandit.</p>
+                                </div>
+                                <div className="col-6">
+                                    <div className="d-flex flex-column">
+                                        <span className="orange" style={{ fontSize: "36px" }}>"</span>
+                                        <img width="72" src="./styles/images/Ellipse 1.png" />
+                                    </div>
+                                    <h5 className="text-bold my-2">Lorem ipsum dolor sit1</h5>
+                                    <p className="w-75">Lorem ipsum dolor sit amet consectetur. Platea placerat in maecenas mattis nunc. Ac nibh quisque elementum pulvinar pellentesque scelerisque. Lacus integer tincidunt dictum nibh dignissim purus ac magna sapien. Pulvinar amet a dapibus in tortor blandit.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                    </button>
+                </div>
             </section>
         }
 
@@ -133,7 +271,31 @@
                     email: "info@ascendermarketing.com"
                 }
             }, {
-                name: "Pune",
+                name: "Delhi",
+                address: {
+                    heading: "Pune - Corporate Office",
+                    description: "Ascender Marketing Solutions Private Limited Pyramid Axis Office 302 Baner Road, Behind Croma Showroom Baner Pune, Maharashtra - 411045",
+                    phone: "7722078396 / 9579740519",
+                    email: "info@ascendermarketing.com"
+                }
+            }, {
+                name: "Mumbai",
+                address: {
+                    heading: "Pune - Corporate Office",
+                    description: "Ascender Marketing Solutions Private Limited Pyramid Axis Office 302 Baner Road, Behind Croma Showroom Baner Pune, Maharashtra - 411045",
+                    phone: "7722078396 / 9579740519",
+                    email: "info@ascendermarketing.com"
+                }
+            }, {
+                name: "Dubai",
+                address: {
+                    heading: "Pune - Corporate Office",
+                    description: "Ascender Marketing Solutions Private Limited Pyramid Axis Office 302 Baner Road, Behind Croma Showroom Baner Pune, Maharashtra - 411045",
+                    phone: "7722078396 / 9579740519",
+                    email: "info@ascendermarketing.com"
+                }
+            }, {
+                name: "Thailand",
                 address: {
                     heading: "Pune - Corporate Office",
                     description: "Ascender Marketing Solutions Private Limited Pyramid Axis Office 302 Baner Road, Behind Croma Showroom Baner Pune, Maharashtra - 411045",
@@ -160,7 +322,35 @@
         }
 
         function Footer() {
-            return <section style={{ height: "calc(60vh)" }} className="ascender-dark">
+            return <section className="ascender-dark py-5 px-3 text-white">
+                <h1 className="text-bold outlined text-center">LET’S DO GOOD TOGETHER</h1>
+
+                <div className="row">
+                    <div className="col-4 text-center">
+                        <img src="./styles/images/Ascender Logo_Black-01 3.png" />
+                    </div>
+                    <div className="col-8">
+                        <h2>
+                            <span className="text-bold">Want to collaborate?</span>
+                            <br />
+                            Have queries?
+                        </h2>
+
+                        <p>Write to us at <a>info@ascendermarketing.com</a>
+                            <br /><br />
+                            For HR related queries email us on <a>swati@ascendermarketing.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div className="row mt-5">
+                    <div className="col-6">
+                        <p className="text-bold">Contact Us</p>
+                        <p>Ascender Marketing Solutions Private Limited Pyramid Axis Office 302 Baner Road, Behind Croma Showroom Baner Pune, Maharashtra - 411045</p>
+                    </div>
+                    <div className="col-6">
+                        <p className="text-bold">Contact Us</p>
+                    </div>
+                </div>
             </section>
         }
 
@@ -172,6 +362,8 @@
             <HowWeWork />
             <OurServices />
             <OurWork />
+            <OurBrands />
+            <Testimonials />
             <OurPresence />
             <Footer />
         </section>
@@ -180,9 +372,7 @@
         );
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
