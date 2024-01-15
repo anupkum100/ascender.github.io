@@ -60,12 +60,12 @@
                 <div className="row">
                     {stats.map(stat => <div className="col-3 d-flex flex-column" key={stat.description}>
                         <h1 className="text-bold yellow">{stat.count}</h1>
-                        <span className="text-light">{stat.description}</span>
+                        <h4 className="text-light">{stat.description}</h4>
                     </div>)}
 
                 </div>
 
-                <small className="text-light">Delivering a wide range of events services focusing on the best in class in event industry by our team of experts and specialists.</small>
+                <p className="text-light my-5">Delivering a wide range of events services focusing on the best in class in event industry by our team of experts and specialists.</p>
             </section>
         }
 
@@ -89,7 +89,7 @@
             }, {
                 title: "Execute",
                 description: "Finally, your dream and vision will unfold into reality with Ascender Marketing. We promise seamless and expert execution by a team of professionals who work with precision, coordination, and attention to detail. All aspects of your event from logistics to management will be executed flawlessly in this stage leaving an impressionable experience for you and your attendees.",
-                img: "Gear.png"
+                img: "tekno.png"
             }, {
                 title: "Evaluate",
                 description: "After the long journey from dreaming to executing, we reach this stage to measure success and refine strategies carefully through our evaluation process. At Ascender Marketing, we are guided by an assessment of every event’s performance. Through analyzing key metrics, gathering feedback, and deriving valuable insights, we ensure to keep getting better at every subsequent event. We execute memorable events and learn and grow with each client and experience.",
@@ -98,12 +98,14 @@
             return <section className="p-5">
                 <h2 className="text-bold">How we work</h2>
 
-                <div className="d-flex" style={{ marginTop: "100px", overflowX: "auto" }}>
-                    {works.map(work => <div className="text-center position-relative flex-shrink-0 mx-3" style={{ width: "430px", height: "490px", border: "0.5px solid #A2A2A2", borderRadius: "55px", boxShadow: "3px 3px 3px A2A2A2" }} key={work.title}>
-                        <img style={{ left: "150px", top: "-60px", zIndex: 2 }} className="position-absolute" src={`./styles/images/${work.img}`} />
+                <div className="d-flex" style={{ overflowX: "auto", overflowY: "hidden" }}>
+                    {works.map(work => <div className="text-center position-relative flex-shrink-0 mx-3" key={work.title}>
+                        <img className="position-relative" style={{ top: "65px" }} height="150px" src={`./styles/images/${work.img}`} />
 
-                        <p style={{ marginTop: "100px" }}>{work.title}</p>
-                        <p>{work.description}</p>
+                        <div style={{ width: "430px", height: "490px", border: "0.5px solid #A2A2A2", borderRadius: "55px", boxShadow: "3px 3px 3px A2A2A2" }}>
+                            <h4 className="text-bold" style={{ marginTop: "100px" }}>{work.title}</h4>
+                            <p className="p-5">{work.description}</p>
+                        </div>
                     </div>)}
                 </div>
             </section>
@@ -129,20 +131,46 @@
                 name: "RETAIL",
                 descrition: "Enhance your customer engagement, boost sales, and transform mere retail experiences into unforgettable brand interactions with Ascender Marketing. Our personalized services can help you drive foot traffic store openings, product showcases, and even in-store promotions."
             }]
-            return <section className="p-3 my-5 ascender-light">
+            return <section className="py-5 my-5 ascender-light">
                 <div className="w-50 m-auto text-center">
                     <h2 className="text-bold">Our Services</h2>
                     <p>We turn events into unforgettable experiences. Our comprehensive suite of services is designed to elevate your occasions, be it corporate events, promotions, audits, retail experiences, rural engagements, or trade fairs. At Ascender Marketing, we blend creativity with precision, offering strategic event planning, seamless execution, and meticulous evaluation.</p>
                 </div>
                 <div className="my-5">
                     <div className="row">
-                        {services.map(service => <h3 className="col-2 text-center" style={{ color: "#C5D1E8" }}>{service.name}</h3>)}
+                        {services.map((service, index) => <h3 className={`col-2 text-center text-nowrap ${index === 0 ? "font-Nunito-bold blue" : "font-Nunito-regular light"}`}>{service.name}</h3>)}
                     </div>
-                    <div>
-                        <p>{services[0].descrition}</p>
+                    <div className="row mt-3">
+                        <div className="col-3 position-relative">
+                            <hr style={{
+                                borderTop: "2px solid #C5D1E8", color: "#C5D1E8"
+                            }} />
+                            <div className="position-absolute" style={{
+                                height: "10px",
+                                width: "10px",
+                                border: "1px solid #C5D1E8",
+                                borderRadius: "5px",
+                                right: "3px",
+                                top: "11.5px"
+                            }}></div>
+                        </div>
+                        <div className="col-9 pe-3">
+                            <div className="pe-3">
+                                <p>{services[0].descrition}</p>
+                                <div style={{ overflowX: "auto" }} className="d-flex">
+                                    <img className="mx-2" src="./styles/images/Rectangle 86.png" />
+                                    <img className="mx-2" src="./styles/images/Rectangle 86.png" />
+                                    <img className="mx-2" src="./styles/images/Rectangle 86.png" />
+                                    <img className="mx-2" src="./styles/images/Rectangle 86.png" />
+                                    <img className="mx-2" src="./styles/images/Rectangle 86.png" />
+                                    <img className="mx-2" src="./styles/images/Rectangle 86.png" />
+                                    <img className="mx-2" src="./styles/images/Rectangle 86.png" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </section >
         }
 
         function OurWork() {
@@ -295,7 +323,7 @@
                 <h2 className="text-bold">Our Presence</h2>
                 <div className="row">
                     <div className="col-2">
-                        <div className="border">
+                        <div className="border bg-white">
                             {places.map(place => <div className="place pointer p-3 my-3" key={place.name}>
                                 <div className="d-flex justify-content-between align-items-center">
                                     <h4 className="font18">{place.name}</h4>

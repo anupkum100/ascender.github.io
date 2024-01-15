@@ -22,6 +22,25 @@
     src: url(./fonts/Quicksand/static/Quicksand-Regular.ttf);
 }
 
+@font-face {
+    font-family: Nunito-Bold;
+    src: url(./fonts/Nunito_Sans/static/NunitoSans_10pt-Black.ttf);
+}
+
+@font-face {
+    font-family: Nunito-Regular;
+    src: url(./fonts/Nunito_Sans/static/NunitoSans_10pt-Light.ttf);
+
+}
+
+.font-Nunito-regular {
+    font-family: Nunito-Regular;
+}
+
+.font-Nunito-bold {
+    font-family: Nunito-Bold;
+}
+
 h1 {
     font-size: 65px;
 }
@@ -44,6 +63,7 @@ h5 {
 
 p {
     font-size: 16px;
+    line-height: 24px;
 }
 
 .font18 {
@@ -75,6 +95,10 @@ a,
     color: #3428C2
 }
 
+.light {
+    color: #C5D1E8
+}
+
 .outlined {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
@@ -93,6 +117,11 @@ a,
 
 .place:hover .child {
     visibility: visible;
+}
+
+.place:hover .font18 {
+    color: #3428C2;
+    font-weight: bold;
 }
 
 .pointer {
