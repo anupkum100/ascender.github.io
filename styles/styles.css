@@ -99,6 +99,13 @@ a,
     color: #C5D1E8
 }
 
+.gradiant-blue {
+    background: linear-gradient(to right, #3D2AC4, #0FBCEC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .outlined {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;

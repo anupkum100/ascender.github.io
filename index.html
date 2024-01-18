@@ -21,23 +21,27 @@
         function Banner() {
             return <section className="position-relative">
                 <img className="position-absolute" style={{ left: "60px", top: "10px" }} src="./styles/images/Ascender Logo_Black-01 2.png" />
-                <img className="w-100 h-100" src="./styles/images/Banner.png" />
+                <img className="w-100" style={{ height: "800px" }} src="./styles/images/Banner.png" />
 
                 <div style={{ zIndex: 1, bottom: "10px" }} className="w-100 position-absolute d-flex align-items-center justify-content-center">
-                    <p className="text-white">In Ascender we take care</p>
+                    <h4 className="text-white">In Ascender we take care <span className="gradiant-blue text-bold">Corporate Events</span></h4>
                 </div>
             </section>
         }
 
         function WhyAscender() {
-            return <section style={{ height: "700px" }} className="m-auto py-5 position-relative">
-                <div className="ascender-light position-absolute" style={{ height: "1300px", width: "90%", borderRadius: "50%", zIndex: "-1", top: "-100%", left: "5%" }}></div>
-                <h2 className="w-50 m-auto mb-3">Why <span className="text-bold">Ascender?</span></h2>
-                <p className="text-left w-50 m-auto">Ascender Marketing is your prime destination to make your events successful! We provide seamless and creative event management services by providing experiences where passion meets quality by carefully meeting your needs. At Ascender, we understand the importance of long-lasting impressions through impactful experiences.
-                    <br /><br />
-                    Our team of seasoned professionals stays dedicated to transforming your vision into a reality by working relentlessly and carefully handling all details to ensure a perfect result. Our events are custom-designed from conceptualization to implementation, serving a commitment to excellence and creativity.
-                    <br /><br />
-                    We prioritize your success by combining innovation with expertise, leveraging advanced technologies, and providing a comprehensive suite of services including event planning, logistics management, and engagement strategies. Explore your unfetched avenues today by trusting Ascender Marketing to help elevate your brand, captivate your audience, and be remembered!</p>
+            return <section className="m-auto pt-5">
+                <div className="position-relative w-50 m-auto" style={{ height: "700px" }}>
+                    <div className="ascender-light position-absolute" style={{ height: "1300px", width: "150%", borderRadius: "50%", zIndex: "-1", top: "-100%", left: "-200px" }}></div>
+
+                    <h2 className="mb-3">Why <span className="text-bold">Ascender?</span></h2>
+
+                    <p className="text-left">Ascender Marketing is your prime destination to make your events successful! We provide seamless and creative event management services by providing experiences where passion meets quality by carefully meeting your needs. At Ascender, we understand the importance of long-lasting impressions through impactful experiences.
+                        <br /><br />
+                        Our team of seasoned professionals stays dedicated to transforming your vision into a reality by working relentlessly and carefully handling all details to ensure a perfect result. Our events are custom-designed from conceptualization to implementation, serving a commitment to excellence and creativity.
+                        <br /><br />
+                        We prioritize your success by combining innovation with expertise, leveraging advanced technologies, and providing a comprehensive suite of services including event planning, logistics management, and engagement strategies. Explore your unfetched avenues today by trusting Ascender Marketing to help elevate your brand, captivate your audience, and be remembered!</p>
+                </div>
             </section>
         }
 
@@ -183,7 +187,7 @@
         }
 
         function OurBrands() {
-            const brands = ["image 14", "image 14", "image 14", "image 14", "image 14", "image 14"]
+            const brands = ["image 14", "image 3", "image 4", "image 5", "image 6", "image 10"]
             return <section className="ascender-light p-5">
                 <h2 className="text-bold text-center">Brands trusted on us</h2>
                 <div className="row">
@@ -214,7 +218,7 @@
                             <div className="row">
                                 <div className="col-6">
                                     <div className="d-flex flex-column">
-                                        <span className="orange" style={{ fontSize: "36px" }}>"</span>
+                                        <img className="mb-3" width="36" src="./styles/images/semicolon.png" />
                                         <img width="72" src="./styles/images/Ellipse 1.png" />
                                     </div>
                                     <h5 className="text-bold my-2">Lorem ipsum dolor sit1</h5>
@@ -222,7 +226,7 @@
                                 </div>
                                 <div className="col-6">
                                     <div className="d-flex flex-column">
-                                        <span className="orange" style={{ fontSize: "36px" }}>"</span>
+                                        <img className="mb-3" width="36" src="./styles/images/semicolon.png" />
                                         <img width="72" src="./styles/images/Ellipse 1.png" />
                                     </div>
                                     <h5 className="text-bold my-2">Lorem ipsum dolor sit1</h5>
@@ -388,9 +392,9 @@
                     <div className="col-6">
                         <p className="text-bold">Follow Us</p>
                         <div className="d-flex">
-                            <img className="me-1" src="./styles/images/Insta.png" />
-                            <img className="me-1" src="./styles/images/Insta.png" />
-                            <img className="me-1" src="./styles/images/Insta.png" />
+                            <img style={{ height: 20 }} className="me-2" src="./styles/images/Insta.png" />
+                            <img style={{ height: 20 }} className="me-2" src="./styles/images/twitter.png" />
+                            <img style={{ height: 20 }} className="me-2" src="./styles/images/facebook.png" />
 
                         </div>
 
