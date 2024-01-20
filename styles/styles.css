@@ -1,11 +1,11 @@
+body {
+    overflow-x: hidden;
+}
+
 .ascender-dark {
     background-color: #19192D;
 }
 
-.curved {
-    border-top-left-radius: 100%;
-    border-top-right-radius: 100%;
-}
 
 .ascender-light {
     background-color: #F0F5F7;
@@ -31,6 +31,15 @@
     font-family: Nunito-Regular;
     src: url(./fonts/Nunito_Sans/static/NunitoSans_10pt-Light.ttf);
 
+}
+
+.service-heading {
+    color: #C5D1E8
+}
+
+.service-heading.active {
+    color: #3428C2;
+    font-family: Nunito-Bold;
 }
 
 .font-Nunito-regular {
@@ -84,6 +93,11 @@ body {
 
 .yellow {
     color: #FFC045;
+}
+
+.work-section-button:hover {
+    background-color: #E56039 !important;
+    border-color: #E56039 !important;
 }
 
 a,
@@ -159,4 +173,20 @@ a,
 #Thailand {
     left: 900px;
     top: 200px
+}
+
+.fade-in-from-right {
+    animation: fadeInFromRight 0.5s ease-in-out;
+}
+
+@keyframes fadeInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
