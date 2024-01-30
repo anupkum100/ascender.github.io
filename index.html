@@ -422,9 +422,15 @@
                     <div className="col-6">
                         <p className="text-bold">Follow Us</p>
                         <div className="d-flex">
-                            <img style={{ height: 20 }} className="me-2" src="./styles/images/Insta.png" />
-                            <img style={{ height: 20 }} className="me-2" src="./styles/images/twitter.png" />
-                            <img style={{ height: 20 }} className="me-2" src="./styles/images/facebook.png" />
+                            <a target="_blank" href="https://www.instagram.com/ascender_marketing_events?igsh=NHhsd2t6YWxjenV1&utm_source=qr">
+                                <img style={{ height: 20 }} className="me-2" src="./styles/images/Insta.png" />
+                            </a>
+                            <a target="_blank" href="https://www.linkedin.com/company/ascender-marketing-solutions/mycompany/?viewAsMember=true">
+                                <img style={{ height: 20 }} className="me-2" src="./styles/images/twitter.png" />
+                            </a>
+                            <a target="_blank" href="https://www.facebook.com/ascendermarketing">
+                                <img style={{ height: 20 }} className="me-2" src="./styles/images/facebook.png" />
+                            </a>
 
                         </div>
 
@@ -455,52 +461,3 @@
 </body>
 
 </html>
-
-<style>
-    .word1,
-    .word2,
-    .word3 {
-        background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        right: 0
-    }
-
-    @keyframes bounceInUp {
-        0% {
-            display: "none";
-            transform: translateY(2000px);
-        }
-
-        60% {
-            display: "block";
-            transform: translateY(-30px);
-        }
-
-        80% {
-            transform: translateY(10px);
-        }
-
-        100% {
-            transform: translateY(0);
-        }
-    }
-
-    .bounceInUp {
-        -webkit-animation-name: bounceInUp;
-        animation-name: bounceInUp;
-    }
-
-    .word1 {
-        -webkit-animation: bounceInUp 2s infinite;
-        -webkit-animation-delay: 0s;
-
-    }
-
-    .word2 {
-        display: "none";
-        -webkit-animation: bounceInUp 2s infinite;
-        -webkit-animation-delay: 2s;
-    }
-</style>
