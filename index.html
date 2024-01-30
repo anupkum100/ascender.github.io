@@ -19,12 +19,36 @@
 
     <script type="text/babel">
         function Banner() {
+            const events = ["Corporate events", "Exhibition stall", "Retail promotions", "Concerts", "Fashion Shows", "Road Shows", "In-Store Activity", "Mall Activity", "Dealers Meet"]
+            const [activeEvent, setActiveEvent] = React.useState(0);
+
+            // setInterval(() => {
+            //     console.log("activeEvent", activeEvent)
+            //     if (activeEvent === events.length - 1) {
+            //         console.log("length ho gya")
+            //         setActiveEvent(0)
+            //     } else {
+            //         console.log("normal")
+
+            //         setActiveEvent(activeEvent + 1)
+            //     }
+
+            // }, 2000)
+
+            // startTimer(){
+            //     if (!this.timerId) {
+            //         this.timerId = setInterval(() => {
+            //             //your function
+            //         }, 1000);
+            //     }
+            // }
+
             return <section className="position-relative">
                 <img className="position-absolute" style={{ left: "60px", top: "10px" }} src="./styles/images/Ascender Logo_Black-01 2.png" />
                 <img className="w-100" style={{ height: "800px" }} src="./styles/images/Banner.png" />
 
                 <div style={{ zIndex: 1, bottom: "10px" }} className="w-100 position-absolute d-flex align-items-center justify-content-center">
-                    <h4 className="text-white">In Ascender we take care <span className="gradiant-blue text-bold">Corporate Events</span></h4>
+                    <h4 className="text-white">In Ascender we take care <span className="gradiant-blue text-bold">{events[activeEvent]}</span></h4>
                 </div>
             </section>
         }
@@ -250,7 +274,6 @@
         }
 
         function Testimonials() {
-            const brands = ["image 14", "image 14", "image 14", "image 14", "image 14", "image 14"]
             return <section className="p-5">
                 <h2 className="text-bold text-center">Testimonials</h2>
                 <h4 className="text-center">Words from our <span className="text-bold">Happy Clients</span></h4>
@@ -268,62 +291,20 @@
                                 <div className="col-6">
                                     <div className="d-flex flex-column">
                                         <img className="mb-3" width="36" src="./styles/images/semicolon.png" />
-                                        <img width="72" src="./styles/images/Ellipse 1.png" />
+                                        <img style={{ borderRadius: "50%" }} height="72" width="72" src="./styles/images/tushar.jpeg" />
                                     </div>
-                                    <h5 className="text-bold my-2">Lorem ipsum dolor sit1</h5>
-                                    <p className="w-75">Lorem ipsum dolor sit amet consectetur. Platea placerat in maecenas mattis nunc. Ac nibh quisque elementum pulvinar pellentesque scelerisque. Lacus integer tincidunt dictum nibh dignissim purus ac magna sapien. Pulvinar amet a dapibus in tortor blandit.</p>
+                                    <h5 className="text-bold my-2">Tushar Shetye</h5>
+                                    <p className="w-75">I am thrilled to provide a testimonial for the incredible work done by the agency Ascender Marketing. Their innovative approach, attention to detail, and dedication to capturing our brand essence exceeded our expectations. The team's creativity and professionalism have undoubtedly elevated our brand, and I wholeheartedly recommend their services to anyone seeking top-notch branding solutions.</p>
                                 </div>
                                 <div className="col-6">
                                     <div className="d-flex flex-column">
                                         <img className="mb-3" width="36" src="./styles/images/semicolon.png" />
-                                        <img width="72" src="./styles/images/Ellipse 1.png" />
+                                        <img style={{ borderRadius: "50%" }} height="72" width="72" src="./styles/images/profile.png" />
                                     </div>
-                                    <h5 className="text-bold my-2">Lorem ipsum dolor sit1</h5>
-                                    <p className="w-75">Lorem ipsum dolor sit amet consectetur. Platea placerat in maecenas mattis nunc. Ac nibh quisque elementum pulvinar pellentesque scelerisque. Lacus integer tincidunt dictum nibh dignissim purus ac magna sapien. Pulvinar amet a dapibus in tortor blandit.</p>
+                                    <h5 className="text-bold my-2">Rohan Thete</h5>
+                                    <p className="w-75">I am extremely pleased with the services provided by Ascender Marketing for SKF Stall at the Krishi Darshan Event. Their professionalism, attention to detail, and efficient problem-solving made the entire process seamless. The standout presence they created significantly contributed to event success. I highly recommend Ascender Marketing for their outstanding support.</p>
                                 </div>
                             </div>
-                        </div>
-                        <div className="carousel-item">
-                            <div className="row">
-                                <div className="col-6">
-                                    <div className="d-flex flex-column">
-                                        <span className="orange" style={{ fontSize: "36px" }}>"</span>
-                                        <img width="72" src="./styles/images/Ellipse 1.png" />
-                                    </div>
-                                    <h5 className="text-bold my-2">Lorem ipsum dolor sit1</h5>
-                                    <p className="w-75">Lorem ipsum dolor sit amet consectetur. Platea placerat in maecenas mattis nunc. Ac nibh quisque elementum pulvinar pellentesque scelerisque. Lacus integer tincidunt dictum nibh dignissim purus ac magna sapien. Pulvinar amet a dapibus in tortor blandit.</p>
-                                </div>
-                                <div className="col-6">
-                                    <div className="d-flex flex-column">
-                                        <span className="orange" style={{ fontSize: "36px" }}>"</span>
-                                        <img width="72" src="./styles/images/Ellipse 1.png" />
-                                    </div>
-                                    <h5 className="text-bold my-2">Lorem ipsum dolor sit1</h5>
-                                    <p className="w-75">Lorem ipsum dolor sit amet consectetur. Platea placerat in maecenas mattis nunc. Ac nibh quisque elementum pulvinar pellentesque scelerisque. Lacus integer tincidunt dictum nibh dignissim purus ac magna sapien. Pulvinar amet a dapibus in tortor blandit.</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div className="carousel-item">
-                            <div className="row">
-                                <div className="col-6">
-                                    <div className="d-flex flex-column">
-                                        <span className="orange" style={{ fontSize: "36px" }}>"</span>
-                                        <img width="72" src="./styles/images/Ellipse 1.png" />
-                                    </div>
-                                    <h5 className="text-bold my-2">Lorem ipsum dolor sit1</h5>
-                                    <p className="w-75">Lorem ipsum dolor sit amet consectetur. Platea placerat in maecenas mattis nunc. Ac nibh quisque elementum pulvinar pellentesque scelerisque. Lacus integer tincidunt dictum nibh dignissim purus ac magna sapien. Pulvinar amet a dapibus in tortor blandit.</p>
-                                </div>
-                                <div className="col-6">
-                                    <div className="d-flex flex-column">
-                                        <span className="orange" style={{ fontSize: "36px" }}>"</span>
-                                        <img width="72" src="./styles/images/Ellipse 1.png" />
-                                    </div>
-                                    <h5 className="text-bold my-2">Lorem ipsum dolor sit1</h5>
-                                    <p className="w-75">Lorem ipsum dolor sit amet consectetur. Platea placerat in maecenas mattis nunc. Ac nibh quisque elementum pulvinar pellentesque scelerisque. Lacus integer tincidunt dictum nibh dignissim purus ac magna sapien. Pulvinar amet a dapibus in tortor blandit.</p>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                     <br />
