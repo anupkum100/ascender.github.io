@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Ascender Marketing</title>
 </head>
 
@@ -22,30 +22,41 @@
             const events = ["Corporate events", "Exhibition stall", "Retail promotions", "Concerts", "Fashion Shows", "Road Shows", "In-Store Activity", "Mall Activity", "Dealers Meet"]
             const [activeEvent, setActiveEvent] = React.useState(0);
 
-            // setInterval(() => {
-            //     console.log("activeEvent", activeEvent)
-            //     if (activeEvent === events.length - 1) {
-            //         console.log("length ho gya")
-            //         setActiveEvent(0)
-            //     } else {
-            //         console.log("normal")
+            const openNav = () => {
+                document.getElementById("mySidenav").style.width = "50%";
+            }
 
-            //         setActiveEvent(activeEvent + 1)
-            //     }
-
-            // }, 2000)
-
-            // startTimer(){
-            //     if (!this.timerId) {
-            //         this.timerId = setInterval(() => {
-            //             //your function
-            //         }, 1000);
-            //     }
-            // }
+            const closeNav = () => {
+                document.getElementById("mySidenav").style.width = "0";
+            }
 
             return <section className="position-relative">
+
+                <div id="mySidenav" className="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onClick={() => closeNav()}>&times;</a>
+                    <a href="#">Home</a>
+                    <a href="#">Our Clients</a>
+                    <a href="#">Our Services</a>
+                    <a href="#">Our Work</a>
+                    <a href="#">Testimonials</a>
+                    <a href="#">Contact Us</a>
+                </div>
+
                 <img className="position-absolute" style={{ left: "60px", top: "10px" }} src="./styles/images/Ascender Logo_Black-01 2.png" />
+                <img onClick={() => openNav()} className="position-absolute" style={{ right: "60px", top: "10px" }} src="./styles/images/Frame 2.png" />
+
                 <img className="w-100" style={{ height: "800px" }} src="./styles/images/Banner.png" />
+
+                <div className="position-absolute w-100 d-flex align-items-center justify-content-center flex-column" style={{ zIndex: 1, bottom: "50px" }}>
+                    <p className="font14 text-white m-0">Know more</p>
+                    <div style={{ height: "60px", width: "1px", backgroundColor: "white" }}></div>
+                    <div style={{
+                        height: "10px",
+                        width: "10px",
+                        border: "1px solid #fff",
+                        borderRadius: "5px"
+                    }}></div>
+                </div>
 
                 <div style={{ zIndex: 1, bottom: "10px" }} className="w-100 position-absolute d-flex align-items-center justify-content-center">
                     <h4 className="text-white">In Ascender we take care <span className="gradiant-blue text-bold">{events[activeEvent]}</span></h4>
@@ -56,7 +67,7 @@
         function WhyAscender() {
             return <section className="m-auto pt-5">
                 <div className="position-relative w-50 m-auto" style={{ height: "700px" }}>
-                    <div className="ascender-light position-absolute" style={{ height: "1300px", width: "150%", borderRadius: "50%", zIndex: "-1", top: "-100%", left: "-200px" }}></div>
+                    <div className="d-none d-xl-block ascender-light position-absolute" style={{ height: "1300px", width: "150%", borderRadius: "50%", zIndex: "-1", top: "-100%", left: "-200px" }}></div>
 
                     <h2 className="mb-3">Why <span className="text-bold">Ascender?</span></h2>
 
@@ -341,6 +352,7 @@
                 label: "Spark Creativity",
                 color: "#FCE7C7"
             }]
+
             return <section className="p-5">
                 <h2 className="text-bold text-center">Testimonials</h2>
                 <h4 className="text-center">Words from our <span className="text-bold">Happy Clients</span></h4>
@@ -357,9 +369,7 @@
 
                 <div id="carouselExampleIndicators" className="carousel carousel-dark slide py-5" data-ride="carousel">
                     <div className="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+                        {testimonials.map((testimonial, index) => <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={index} className={index === 0 ? "active" : ""}></button>)}
                     </div>
                     <div className="carousel-inner w-75 m-auto">
                         {testimonials.map((testimonial, index) => <div className={`carousel-item ${index === 0 ? "active" : ""}`}>
@@ -439,6 +449,9 @@
                                 <div id={place.name} style={{ width: "250px" }} className="position-absolute child bg-white p-3 rounded shadow">
                                     <p className="font18 blue">{place.address.heading || place.name}</p>
                                     <p className="font14">{place.address.description}</p>
+
+                                    <img style={{ bottom: "-50px", left: "45%" }} className="mb-3 position-absolute" width="16" src="./styles/images/Vector.png" />
+
                                 </div>
                             </div>
                             )}

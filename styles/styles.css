@@ -151,23 +151,23 @@ a,
 
 /* Add position for new places here  */
 #Pune {
-    left: 800px;
-    top: 200px
+    left: 900px;
+    top: 100px
 }
 
 #Delhi {
-    left: 800px;
-    top: 180px
+    left: 900px;
+    top: 160px
 }
 
 #Mumbai {
-    left: 820px;
-    top: 200px
+    left: 890px;
+    top: 100px
 }
 
 #Dubai {
-    left: 700px;
-    top: 200px
+    left: 800px;
+    top: 130px
 }
 
 #Thailand {
@@ -188,5 +188,50 @@ a,
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+/* side bar  */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff !important;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
     }
 }
