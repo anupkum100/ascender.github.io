@@ -288,27 +288,25 @@
         }
 
         function Testimonials() {
-            const testimonials = [
-                [{
-                    name: "Tushar Shetye",
-                    designation: "Marketing Manager - West & South Region",
-                    company: "Pathkind Diagnostics Pvt. Ltd",
-                    description: "I am thrilled to provide a testimonial for the incredible work done by the agency Ascender Marketing. Their innovative approach, attention to detail, and dedication to capturing our brand essence exceeded our expectations. The team's creativity and professionalism have undoubtedly elevated our brand, and I wholeheartedly recommend their services to anyone seeking top-notch branding solutions.",
-                    image: "tushar"
-                }, {
-                    name: "Rohan Thete",
-                    designation: "Marketing and Communication",
-                    company: "SKF Automotive - India & Southeast Asia",
-                    description: "I am extremely pleased with the services provided by Ascender Marketing for SKF Stall at the Krishi Darshan Event. Their professionalism, attention to detail, and efficient problem-solving made the entire process seamless. The standout presence they created significantly contributed to event success. I highly recommend Ascender Marketing for their outstanding support.",
-                    image: "rohan"
-                }], [{
-                    name: "Vikram Singh Thakur",
-                    designation: "National Trade Marketing Manager",
-                    company: "Allied Blenders and Distillers Ltd.",
-                    description: "I wanted to take a moment to express my sincere gratitude for the exceptional marketing services Ascender has provided. Ascender Marketing team's creativity, strategic approach, and unwavering dedication have significantly contributed to the success of our recent campaigns. Working with Ascender Marketing talented professionals has been a pleasure. Your responsiveness, attention to detail, and ability to adapt to evolving market trends have set a standard of excellence that truly distinguishes Ascender Marketing Solutions.Thank you for being an invaluable partner in our marketing endeavors. We look forward to continuing this successful collaboration and achieving even greater milestones together.",
-                    image: "vikram"
-                }]
-            ]
+            const testimonials = [{
+                name: "Tushar Shetye",
+                designation: "Marketing Manager - West & South Region",
+                company: "Pathkind Diagnostics Pvt. Ltd",
+                description: "I am thrilled to provide a testimonial for the incredible work done by the agency Ascender Marketing. Their innovative approach, attention to detail, and dedication to capturing our brand essence exceeded our expectations. The team's creativity and professionalism have undoubtedly elevated our brand, and I wholeheartedly recommend their services to anyone seeking top-notch branding solutions.",
+                image: "tushar"
+            }, {
+                name: "Rohan Thete",
+                designation: "Marketing and Communication",
+                company: "SKF Automotive - India & Southeast Asia",
+                description: "I am extremely pleased with the services provided by Ascender Marketing for SKF Stall at the Krishi Darshan Event. Their professionalism, attention to detail, and efficient problem-solving made the entire process seamless. The standout presence they created significantly contributed to event success. I highly recommend Ascender Marketing for their outstanding support.",
+                image: "rohan"
+            }, {
+                name: "Vikram Singh Thakur",
+                designation: "National Trade Marketing Manager",
+                company: "Allied Blenders and Distillers Ltd.",
+                description: "I wanted to take a moment to express my sincere gratitude for the exceptional marketing services Ascender has provided. Ascender Marketing team's creativity, strategic approach, and unwavering dedication have significantly contributed to the success of our recent campaigns. Working with Ascender Marketing talented professionals has been a pleasure. Your responsiveness, attention to detail, and ability to adapt to evolving market trends have set a standard of excellence that truly distinguishes Ascender Marketing Solutions.Thank you for being an invaluable partner in our marketing endeavors. We look forward to continuing this successful collaboration and achieving even greater milestones together.",
+                image: "vikram"
+            }]
 
             const marque1 = [{
                 label: "Flawless Events",
@@ -371,22 +369,24 @@
                 </div>
 
                 <div id="carouselExampleIndicators" className="carousel carousel-dark slide py-5" data-ride="carousel">
-                    <div className="carousel-indicators">
+                    <div className="d-none carousel-indicators">
                         {testimonials.map((testimonial, index) => <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={index} className={index === 0 ? "active" : ""}></button>)}
                     </div>
                     <div className="carousel-inner w-75 m-auto">
                         {testimonials.map((testimonial, index) => <div className={`carousel-item ${index === 0 ? "active" : ""}`}>
-                            <div className="row">
-                                {testimonial.map(data => <div className="col-6">
-                                    <div className="d-flex flex-column">
-                                        <img className="mb-3" width="36" src="./styles/images/semicolon.png" />
-                                        <img style={{ borderRadius: "50%" }} height="72" width="72" src={`./styles/images/${data.image}.jpeg`} />
-                                    </div>
-                                    <h5 className="text-bold my-2">{data.name}</h5>
-                                    <p className="text-bold font14 my-1">{data.designation}</p>
-                                    <p className="text-bold font14 my-1">{data.company}</p>
-                                    <p className="w-75">{data.description}</p>
-                                </div>)}
+                            <div className="d-flex align-items-center">
+                                <img style={{ borderRadius: "50%" }} height="72" width="72" src={`./styles/images/${testimonial.image}.jpeg`} />
+
+                                <div className="ms-3">
+                                    <h5 className="text-bold my-2">{testimonial.name}</h5>
+                                    <p className="mb-1">{testimonial.designation}</p>
+                                    <p className="mb-1">{testimonial.company}</p>
+                                </div>
+                            </div>
+
+                            <div className="mt-3" style={{ backgroundColor: "#F4F5FB", borderRadius: "12px", padding: "20px" }}>
+                                <img style={{ filter: "grayscale(1)" }} className="mb-3" width="16" src="./styles/images/semicolon.png" />
+                                <p className="font14">{testimonial.description}</p>
                             </div>
                         </div>)}
                     </div>
