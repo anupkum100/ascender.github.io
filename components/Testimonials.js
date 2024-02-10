@@ -78,19 +78,19 @@ function Testimonials() {
 
         <div>
             <marquee scrollamount="20" direction="right">
-                {marque1.map(el => <h2 className="d-inline text-bold me-3 text-uppercase" style={{ color: el.color }}>{el.label}</h2>)}
+                {marque1.map(el => <h2 key={el.label} className="d-inline text-bold me-3 text-uppercase" style={{ color: el.color }}>{el.label}</h2>)}
             </marquee>
             <marquee scrollamount="20" direction="left">
-                {marque2.map(el => <h2 className="d-inline text-bold me-3 text-uppercase" style={{ color: el.color }}>{el.label}</h2>)}
+                {marque2.map(el => <h2 key={el.label} className="d-inline text-bold me-3 text-uppercase" style={{ color: el.color }}>{el.label}</h2>)}
             </marquee>
         </div>
 
         <div id="carouselExampleIndicators" className="carousel carousel-dark slide py-5" data-ride="carousel">
             <div className="d-none carousel-indicators">
-                {testimonials.map((testimonial, index) => <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={index} className={index === 0 ? "active" : ""}></button>)}
+                {testimonials.map((testimonial, index) => <button key={index} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={index} className={index === 0 ? "active" : ""}></button>)}
             </div>
             <div className="carousel-inner w-75 m-auto">
-                {testimonials.map((testimonial, index) => <div className={`carousel-item ${index === 0 ? "active" : ""}`}>
+                {testimonials.map((testimonial, index) => <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
                     <div className="d-flex align-items-center">
                         <img style={{ borderRadius: "50%" }} height="72" width="72" src={`./styles/images/${testimonial.image}.jpeg`} />
 

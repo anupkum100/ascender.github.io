@@ -40,6 +40,7 @@ function OurServices() {
         <div id="carouselExampleIndicators0" className="carousel carousel-dark slide my-5">
             <div className="row">
                 {services.map((service, index) => <h3
+                    key={index}
                     onClick={() => setActive(index)}
                     data-bs-target="#carouselExampleIndicators0"
                     data-bs-slide-to={index}
@@ -60,11 +61,11 @@ function OurServices() {
                     }}></div>
                 </div>
 
-                {services.map((service, index) => <div className={`${index === 0 ? 'active' : ""} col-9 pe-3 carousel-item`}>
+                {services.map((service, index) => <div key={index} className={`${index === 0 ? 'active' : ""} col-9 pe-3 carousel-item`}>
                     <div className="pe-3">
                         <p>{service.descrition}</p>
                         <div style={{ overflowX: "auto" }} className="d-flex">
-                            {service.images.map(image => <img className="mx-2" src={`./styles/images/${image}`} />)}
+                            {service.images.map((image, imageIndex) => <img key={imageIndex} className="mx-2" src={`./styles/images/${image}`} />)}
                         </div>
                     </div>
                 </div>)}
