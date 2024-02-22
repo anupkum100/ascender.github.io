@@ -42,13 +42,13 @@ function Footer() {
                 <p className="text-bold">Follow Us</p>
                 <div className="d-flex">
                     <a target="_blank" href="https://www.instagram.com/ascender_marketing_events?igsh=NHhsd2t6YWxjenV1&utm_source=qr">
-                        <img style={{ height: 24 }} className="me-2" src="./styles/images/Insta.png" />
+                        <img style={{ height: 30 }} className="me-2" src="./styles/images/Insta.png" />
                     </a>
                     <a target="_blank" href="https://www.linkedin.com/company/ascender-marketing-solutions/mycompany/?viewAsMember=true">
-                        <img style={{ height: 24 }} className="me-2" src="./styles/images/twitter.png" />
+                        <img style={{ height: 30 }} className="me-2" src="./styles/images/twitter.png" />
                     </a>
                     <a target="_blank" href="https://www.facebook.com/ascendermarketing">
-                        <img style={{ height: 24 }} className="me-2" src="./styles/images/facebook.png" />
+                        <img style={{ height: 30 }} className="me-2" src="./styles/images/facebook.png" />
                     </a>
                 </div>
             </div>
