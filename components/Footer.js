@@ -22,7 +22,7 @@ function Footer() {
             </div>
         </div>
         <div className="row mt-5 text-white w-75 m-auto">
-            <div className="col-3">
+            <div className="col-4">
                 <p className="text-bold">Contact Us</p>
                 <p className="font18 text-bold">Ascender Marketing Solutions</p>
                 <p>Private Limited Pyramid Axis Office 302 Baner Road, Behind Croma Showroom Baner Pune, Maharashtra - 411045</p>
@@ -37,7 +37,7 @@ function Footer() {
 
 
             </div>
-            <div className="col-3"></div>
+            <div className="col-2"></div>
             <div className="col-6">
                 <p className="text-bold">Follow Us</p>
                 <div className="d-flex">
