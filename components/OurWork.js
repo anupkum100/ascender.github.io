@@ -12,33 +12,33 @@ function OurWork() {
 
         <div className="row my-5">
             <div className="col-4">
-                <img className="w-100" height="300px" src={`./styles/images/Work/work13.png`} />
+                <img className="w-100" height="300px" src={`./styles/images/work/work13.png`} />
             </div>
             <div className="col-4">
-                <img className="w-100" height="300px" src={`./styles/images/Work/work0.png`} />
+                <img className="w-100" height="300px" src={`./styles/images/work/work0.jpg`} />
             </div>
             <div className="col-4">
-                <img className="w-100" height="300px" src={`./styles/images/Work/work1.jpg`} />
-            </div>
-            <div className="w-100"></div>
-            <div className="col-4">
-                <img className="w-100" height="300px" src={`./styles/images/Work/work2.jpg`} />
-            </div>
-            <div className="col-4">
-                <img className="w-100" height="300px" src={`./styles/images/Work/work3.jpg`} />
-            </div>
-            <div className="col-4">
-                <img className="w-100" height="300px" src={`./styles/images/Work/work4.jpg`} />
+                <img className="w-100" height="300px" src={`./styles/images/work/work1.jpg`} />
             </div>
             <div className="w-100"></div>
             <div className="col-4">
-                <img className="w-100" height="300px" src={`./styles/images/Work/work5.jpg`} />
+                <img className="w-100" height="300px" src={`./styles/images/work/work2.jpg`} />
             </div>
             <div className="col-4">
-                <img className="w-100" height="300px" src={`./styles/images/Work/work6.jpg`} />
+                <img className="w-100" height="300px" src={`./styles/images/work/work3.jpg`} />
             </div>
             <div className="col-4">
-                <img className="w-100" height="300px" src={`./styles/images/Work/work7.jpg`} />
+                <img className="w-100" height="300px" src={`./styles/images/work/work4.jpg`} />
+            </div>
+            <div className="w-100"></div>
+            <div className="col-4">
+                <img className="w-100" height="300px" src={`./styles/images/work/work5.jpg`} />
+            </div>
+            <div className="col-4">
+                <img className="w-100" height="300px" src={`./styles/images/work/work6.jpg`} />
+            </div>
+            <div className="col-4">
+                <img className="w-100" height="300px" src={`./styles/images/work/work7.jpg`} />
             </div>
         </div>
     </section>

@@ -19,7 +19,7 @@ function OurServices() {
     {
         name: "AUDIT",
         descrition: "Ascender Marketing’s comprehensive audit services can help you ensure accuracy and accountability in all your events. We precisely review and analyze all aspects of an event from budget to logistics. Our core lies in providing valuable insights to our clients through transparency and efficiency to optimize events.",
-        images: ["Rectangle 86.png", "Rectangle 87.png", "Rectangle 88.png"]
+        images: ["Rectangle 86.png"]
     },
     {
         name: "RURAL",
@@ -29,7 +29,7 @@ function OurServices() {
     {
         name: "RETAIL",
         descrition: "Enhance your customer engagement, boost sales, and transform mere retail experiences into unforgettable brand interactions with Ascender Marketing. Our personalized services can help you drive foot traffic store openings, product showcases, and even in-store promotions.",
-        images: ["Retail/retail1.jpg", "Retail/retail2.jpg", "Retail/retail3.jpg", "Retail/retail4.jpg"]
+        images: ["Retail/retail1.JPG", "Retail/retail2.JPG", "Retail/retail3.JPG", "Retail/retail4.JPG"]
 
     }]
     return <section className="py-5 my-5 ascender-light">
