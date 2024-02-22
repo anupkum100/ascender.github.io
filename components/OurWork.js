@@ -15,7 +15,7 @@ function OurWork() {
                 <img className="w-100" height="300px" src={`./styles/images/work/work13.png`} />
             </div>
             <div className="col-4">
-                <img className="w-100" height="300px" src={`./styles/images/work/work0.jpg`} />
+                <img className="w-100" height="300px" src={`./styles/images/work/work0.png`} />
             </div>
             <div className="col-4">
                 <img className="w-100" height="300px" src={`./styles/images/work/work1.jpg`} />

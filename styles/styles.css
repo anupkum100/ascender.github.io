@@ -34,7 +34,8 @@ body {
 }
 
 .service-heading {
-    color: #C5D1E8
+    color: #C5D1E8;
+    font-size: 32px !important;
 }
 
 .service-heading.active {

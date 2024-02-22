@@ -5,7 +5,7 @@ function OurServices() {
     const services = [{
         name: "EVENTS",
         descrition: "Help your brand shine and succeed through carefully curated events by Ascender Marketing. Our services are designed to help transform your vision into a reality through seamless execution from conceptualization to implementation. We personalize our events according to your unique needs to captivate your audience through a bouquet of services performed by experts. By bringing together passion, creativity, and a keen eye for detail, we can help convert an ordinary event into an extraordinary experience.",
-        images: ["Event/event1.jpg", "Event/event2.jpg", "Event/event3.jpg", "Event/event9.jpg", "Event/event5.jpg", "Event/event6.jpg"]
+        images: ["Event/event1.jpg", "Event/event2.jpg", "Event/event3.JPG", "Event/event9.JPG", "Event/event5.JPG", "Event/event6.JPG"]
     }, {
         name: "PROMOTIONS",
         descrition: "Ascender Marketing provides strategic promotional services to spark brand visibility and engagement by crafting compelling campaigns to resonate with your brand and reach your target audience. We should be your answer from activating your brand to launching new products. Our team of seasoned professionals uses their expertise to leverage innovation and creativity to create buzz and drive results through impactful experiences.",

@@ -24,7 +24,8 @@ function Footer() {
         <div className="row mt-5 text-white w-75 m-auto">
             <div className="col-3">
                 <p className="text-bold">Contact Us</p>
-                <p>Ascender Marketing Solutions Private Limited Pyramid Axis Office 302 Baner Road, Behind Croma Showroom Baner Pune, Maharashtra - 411045</p>
+                <p className="font18 text-bold">Ascender Marketing Solutions</p>
+                <p>Private Limited Pyramid Axis Office 302 Baner Road, Behind Croma Showroom Baner Pune, Maharashtra - 411045</p>
                 <div className="d-flex align-items-center">
                     <img style={{ height: 20 }} className="me-1" src="./styles/images/Phone.png" />
                     <span className="mx-2">7722078396 / 9579740519</span>
@@ -41,13 +42,13 @@ function Footer() {
                 <p className="text-bold">Follow Us</p>
                 <div className="d-flex">
                     <a target="_blank" href="https://www.instagram.com/ascender_marketing_events?igsh=NHhsd2t6YWxjenV1&utm_source=qr">
-                        <img style={{ height: 20 }} className="me-2" src="./styles/images/Insta.png" />
+                        <img style={{ height: 24 }} className="me-2" src="./styles/images/Insta.png" />
                     </a>
                     <a target="_blank" href="https://www.linkedin.com/company/ascender-marketing-solutions/mycompany/?viewAsMember=true">
-                        <img style={{ height: 20 }} className="me-2" src="./styles/images/twitter.png" />
+                        <img style={{ height: 24 }} className="me-2" src="./styles/images/twitter.png" />
                     </a>
                     <a target="_blank" href="https://www.facebook.com/ascendermarketing">
-                        <img style={{ height: 20 }} className="me-2" src="./styles/images/facebook.png" />
+                        <img style={{ height: 24 }} className="me-2" src="./styles/images/facebook.png" />
                     </a>
                 </div>
             </div>
