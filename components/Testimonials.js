@@ -1,4 +1,11 @@
 function Testimonials() {
+
+    React.useEffect(() => {
+        setTimeout(() => {
+            document.getElementById("next").click()
+        }, 5000)
+    }, []);
+
     const testimonials = [{
         name: "Tushar Shetye",
         designation: "Marketing Manager - West & South Region",
@@ -85,7 +92,7 @@ function Testimonials() {
             </marquee>
         </div>
 
-        <div id="carouselExampleIndicators" className="carousel carousel-dark slide py-5" data-ride="carousel">
+        <div id="carouselExampleIndicators" className="carousel carousel-dark slide py-5" data-bs-ride="true">
             <div className="d-none carousel-indicators">
                 {testimonials.map((testimonial, index) => <button key={index} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={index} className={index === 0 ? "active" : ""}></button>)}
             </div>
@@ -115,7 +122,7 @@ function Testimonials() {
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span className="visually-hidden">Previous</span>
             </button>
-            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <button id="next" className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
                 <span className="visually-hidden">Next</span>
             </button>
