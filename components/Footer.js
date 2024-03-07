@@ -25,7 +25,7 @@ function Footer() {
             <div className="col-4">
                 <p className="text-bold">Contact Us</p>
                 <p className="text-bold">Ascender marketing solutions private limited</p>
-                <p>Private Limited Pyramid Axis Office 302 Baner Road, Behind Croma Showroom Baner Pune, Maharashtra - 411045</p>
+                <p>Pyramid Axis Office 302 Baner Road, Behind Croma Showroom Baner Pune, Maharashtra - 411045</p>
                 <div className="d-flex align-items-center">
                     <img style={{ height: 20 }} className="me-1" src="./styles/images/Phone.png" />
                     <span className="mx-2">7722078396 / 9579740519</span>
