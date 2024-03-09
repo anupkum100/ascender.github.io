@@ -5,6 +5,12 @@ function WhyAscender() {
 
             <h2 className="mb-3">Why <span className="text-bold">Ascender?</span></h2>
 
+            <img style={{ position: "absolute", left: "-360px" }} src="./styles/images/WhyAscender1.png" />
+
+            <img style={{ position: "absolute", right: 0, bottom: "110px" }} src="./styles/images/blue.png" />
+            <img style={{ position: "absolute", right: "-70px", bottom: "280px" }} src="./styles/images/red.png" />
+            <img style={{ position: "absolute", right: "-180px", bottom: "350px" }} src="./styles/images/maroon.png" />
+
             <p className="text-left">Ascender Marketing is your prime destination to make your events successful! We provide seamless and creative event management services by providing experiences where passion meets quality by carefully meeting your needs. At Ascender, we understand the importance of long-lasting impressions through impactful experiences.
                 <br /><br />
                 Our team of seasoned professionals stays dedicated to transforming your vision into a reality by working relentlessly and carefully handling all details to ensure a perfect result. Our events are custom-designed from conceptualization to implementation, serving a commitment to excellence and creativity.
