@@ -79,7 +79,7 @@ function Testimonials() {
     }]
 
     return <section className="p-5">
-        <h2 className="text-bold text-center">Testimonials</h2>
+        {/* <h2 className="text-bold text-center">Testimonials</h2> */}
         <h4 className="text-center">Words from our <span className="text-bold">Happy Clients</span></h4>
         <p className="text-center">We take pride in ensuring that our clients have a good working experience.</p>
 

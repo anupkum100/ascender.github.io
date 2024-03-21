@@ -5,7 +5,7 @@ function WhyAscender() {
 
             <h2 className="mb-3">Why <span className="text-bold">Ascender?</span></h2>
 
-            <img style={{ position: "absolute", left: "-360px" }} src="./styles/images/WhyAscender1.png" />
+            <img style={{ position: "absolute", left: "-360px" }} src="./styles/images/whyAscender1.png" />
 
             <img style={{ position: "absolute", right: 0, bottom: "110px" }} src="./styles/images/blue.png" />
             <img style={{ position: "absolute", right: "-70px", bottom: "280px" }} src="./styles/images/red.png" />
