@@ -104,7 +104,7 @@ function Testimonials() {
                         <div className="ms-3">
                             <h5 className="text-bold my-2">{testimonial.name}</h5>
                             <p className="mb-1">{testimonial.designation}</p>
-                            <p className="mb-1">{testimonial.company}</p>
+                            <p className="mb-1 text-bold">{testimonial.company}</p>
                         </div>
                     </div>
 
