@@ -43,6 +43,12 @@ body {
     font-family: Nunito-Bold;
 }
 
+.works-heading.active {
+    color: #3428C2;
+    font-family: Nunito-Bold;
+}
+
+
 .font-Nunito-regular {
     font-family: Nunito-Regular;
 }

@@ -1,8 +1,14 @@
 
 function OurPresence() {
-    const [activePlace, setActivePlace] = React.useState("Pune");
+    const [activePlace, setActivePlace] = React.useState("Gurugram");
 
     const places = [{
+        name: "Gurugram",
+        map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d877.1254135539648!2d77.1055472!3d28.43429040000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1f004977dc19%3A0xacbfca0f89273d8d!2sAscender%20Marketing%20Solutions%20Private%20Limited!5e0!3m2!1sen!2sin!4v1715439878063!5m2!1sen!2sin",
+        address: {
+            description: "Tower A, Paras Twin Towers, Golf Course Road, Sector 54, Gurugram",
+        }
+    }, {
         name: "Pune",
         map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.211153606969!2d73.7711626!3d18.5645168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2becf389effbd%3A0x727d3cfbea5b6b4!2sAscender%20Marketing%20Solutions!5e0!3m2!1sen!2sin!4v1709908566744!5m2!1sen!2sin",
         address: {
@@ -11,13 +17,15 @@ function OurPresence() {
             phone: "7722078396 / 9579740519",
             email: "info@ascendermarketing.com"
         }
-    }, {
-        name: "Delhi",
-        map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.99558793682!2d77.05297022549193!3d28.38920122579848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d22f8107df9dd%3A0x6d4903eaf9bf1013!2sBESTECH%20PARK%20VIEW%20SPA%20NEXT%2C%20Sector%2067%2C%20Gurugram%2C%20Haryana%20122102!5e0!3m2!1sen!2sin!4v1709910204111!5m2!1sen!2sin",
-        address: {
-            description: "Bestech Park view Spa next Sector 67 Gurugram - 122101",
-        }
-    }, {
+    },
+    // {
+    //     name: "Delhi",
+    //     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.99558793682!2d77.05297022549193!3d28.38920122579848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d22f8107df9dd%3A0x6d4903eaf9bf1013!2sBESTECH%20PARK%20VIEW%20SPA%20NEXT%2C%20Sector%2067%2C%20Gurugram%2C%20Haryana%20122102!5e0!3m2!1sen!2sin!4v1709910204111!5m2!1sen!2sin",
+    //     address: {
+    //         description: "Bestech Park view Spa next Sector 67 Gurugram - 122101",
+    //     }
+    // },
+    {
         name: "Mumbai",
         map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15079.285422599762!2d72.87192874710617!3d19.115491464571576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c908cc253a05%3A0xfeae56dacb282e81!2sraj%20industrial%20eastate!5e0!3m2!1sen!2sin!4v1709910319450!5m2!1sen!2sin",
         address: {
