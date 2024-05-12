@@ -35,12 +35,12 @@ function HowWeWork() {
     return <section className="p-5">
         <h2 className="text-bold">How we work</h2>
 
-        <div id="carouselExampleIndicators0" className="carousel carousel-dark slide my-5">
+        <div id="carouselExampleIndicators1" className="carousel carousel-dark slide my-5">
             <div className="row">
                 {works.map((work, index) => <h5
                     key={index}
                     onClick={() => setActive(index)}
-                    data-bs-target="#carouselExampleIndicators0"
+                    data-bs-target="#carouselExampleIndicators1"
                     data-bs-slide-to={index}
                     className={`col-2 text-center text-nowrap pointer works-heading ${active === index ? "active" : ""}`}>{work.title}</h5>)}
             </div>
@@ -56,16 +56,5 @@ function HowWeWork() {
                 </div>)}
             </div>
         </div>
-
-        {/* <div className="d-flex" style={{ overflowX: "auto", overflowY: "hidden" }}>
-            {works.map(work => <div className="text-center position-relative flex-shrink-0 mx-3" key={work.title}>
-                <img className="position-relative" style={{ top: "65px" }} height="150px" src={`./styles/images/${work.img}`} />
-
-                <div style={{ width: "430px", height: "490px", border: "0.5px solid #A2A2A2", borderRadius: "55px", boxShadow: "3px 3px 3px A2A2A2" }}>
-                    <h4 className="text-bold" style={{ marginTop: "100px" }}>{work.title}</h4>
-                    <p className="p-5">{work.description}</p>
-                </div>
-            </div>)}
-        </div> */}
     </section>
 }
