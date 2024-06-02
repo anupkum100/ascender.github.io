@@ -2,7 +2,7 @@
 
 function Footer() {
     return <section className="ascender-dark py-5 px-3">
-        <h1 className="text-bold outlined text-center">LET’S DO GOOD TOGETHER</h1>
+        <h1 className="text-bold outlined text-center">TOGETHER WE EXCEL</h1>
 
         <div className="row text-white">
             <div className="col-4 text-center">
@@ -24,7 +24,7 @@ function Footer() {
         <div className="row mt-5 text-white w-75 m-auto">
             <div className="col-4">
                 <p className="text-bold">Contact Us</p>
-                <p className="text-bold">Ascender Marketing Solutions Private Limited</p>
+                <h5 style={{ textShadow: "3px 1px 3px #fff" }} className="text-bold">Ascender Marketing Solutions Private Limited</h5>
                 <p>Tower A, Paras Twin Towers, Golf Course Road, Sector 54, Gurugram, Haryana, 122011</p>
                 <div className="d-flex align-items-center">
                     <img style={{ height: 20 }} className="me-1" src="./styles/images/Phone.png" />
