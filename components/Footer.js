@@ -8,16 +8,16 @@ function Footer() {
             <div className="col-4 text-center">
                 <img src="./styles/images/Ascender Logo_Black-01 3.png" />
             </div>
-            <div className="col-8">
+            <div className="col-8 my-5 pt-3">
                 <h2>
                     <span className="text-bold">Want to collaborate?</span>
                     <br />
                     Have queries?
                 </h2>
 
-                <p>Write to us at <a>info@ascendermarketing.com</a>
+                <p>Write to us at <a href="mailto:info@ascendermarketing.com">info@ascendermarketing.com</a>
                     <br /><br />
-                    For HR related queries email us on <a>swati@ascendermarketing.com</a>
+                    For HR related queries email us on <a href="mailto:swati@ascendermarketing.com">swati@ascendermarketing.com</a>
                 </p>
             </div>
         </div>
@@ -28,11 +28,15 @@ function Footer() {
                 <p>Tower A, Paras Twin Towers, Golf Course Road, Sector 54, Gurugram, Haryana, 122011</p>
                 <div className="d-flex align-items-center">
                     <img style={{ height: 20 }} className="me-1" src="./styles/images/Phone.png" />
-                    <span className="mx-2">7722078396 / 9579740519</span>
+                    <span className="mx-2">
+                        <a className="text-white text-decoration-none" href="tel:7722078396">7722078396</a>
+                        <span> / </span>
+                        <a className="text-white text-decoration-none" href="tel:9579740519">9579740519</a>
+                    </span>
                 </div>
                 <div className="d-flex align-items-center mt-2">
                     <img style={{ height: 20 }} className="me-1" src="./styles/images/Email.png" />
-                    <span>info@ascendermarketing.com</span>
+                    <a className="text-white text-decoration-none" href="mailto:info@ascendermarketing.com">info@ascendermarketing.com</a>
                 </div>
 
 
