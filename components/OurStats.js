@@ -8,7 +8,7 @@ const stats = [{
     count: 200,
     description: "Promotions"
 }, {
-    count: 5,
+    count: 50,
     description: "Exhibitions"
 }]
 
